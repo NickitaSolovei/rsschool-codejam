@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha \"tests/**/*.js\"",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "huskyTest": "npm run lint && npm run test"
   },
   "repository": {
     "type": "git",
@@ -27,8 +28,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run lint && npm run test",
-      "pre-commit": "npm run lint && npm run test"
+      "pre-push": "npm run huskyTest",
+      "pre-commit": "npm run huskyTest"
     }
   }
 }
