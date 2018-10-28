@@ -1,0 +1,35 @@
+{
+  "name": "rsschool-codejam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha \"tests/**/*.js\"",
+    "lint": "eslint ./src",
+    "huskyTest": "npm run lint && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickitaSolovei/rsschool-codejam.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickitaSolovei/rsschool-codejam/issues"
+  },
+  "homepage": "https://github.com/NickitaSolovei/rsschool-codejam#readme",
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.1.2",
+    "mocha": "^5.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run huskyTest",
+      "pre-commit": "npm run huskyTest"
+    }
+  }
+}
